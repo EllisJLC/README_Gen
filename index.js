@@ -1,8 +1,5 @@
-
-// TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-// TODO: Create an array of questions for user input
 const questions = [
   {
     type: "input",
@@ -39,7 +36,6 @@ const questions = [
   }
 ];
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   let {title, introduction, installation, usage, test, image, credits, license} = data;
   let i = 1;
@@ -62,24 +58,27 @@ ${i, i++}. [Usage](#usage)
 ${i, i++}. [Test](#test)
 ${i, i++}. [Images](#images)
 ${i, i++}. [Credits](#credits)
-${i, i++}. [Licenses](#licenses)`
-    , (error) => {
+${i, i++}. [Licenses](#licenses)
+\n## Installation 
+\n${installation}
+\n## Usage
+\n${usage}
+\n## Test
+\n${test}
+\n## Images
+\n${imgText}
+\n## Credits
+\n${credits}
+\n## Licenses
+\n${license}`, (error) => {
       if (error) {
         console.log(error);
       } else {
         console.log("Title saved!");
       }
     });
-  // fs.writeFile(fileName, introduction, (error) => {
-  //   if (error) {
-  //     console.log(error);
-  //   } else {
-  //     console.log("Introduction saved!");
-  //   }
-  // })
 }
 
-// TODO: Create a function to initialize app
 function init() {
   inquirer
   .prompt(questions)
