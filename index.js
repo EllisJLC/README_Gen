@@ -20,11 +20,15 @@ const questions = [
   }, {
     type: "input",
     message: "How would one use the program? Provide some steps.",
-    name: "tests",
+    name: "test",
   }, {
     type: "input",
-    message: "Do you have preview?",
+    message: "Do you have preview? (Image will be retrieved using ./assets/images/preview.png path)",
     name: "image"
+  },  {
+    type: "input",
+    message: "Do you have wireframe preview? (Image will be retrieved using ./assets/images/wireframe.png path)",
+    name: "wireframe"
   }, {
     type: "input",
     message: "Please add credits to your work",
@@ -43,7 +47,7 @@ function writeToFile(fileName, data) {
       if (error) {
         console.log(error);
       } else {
-        console.log("Title saved!");
+        console.log("File saved!");
       }
     });
 }
