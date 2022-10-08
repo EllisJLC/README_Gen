@@ -1,9 +1,9 @@
-# A title
+# yes
 
 
 ## Introduction
 
-potato
+yes
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -15,24 +15,29 @@ potato
 
 ## Installation 
 
-tomato
+yesy
 
 ## Usage
 
-no.
+yesy
 
 ## Test
 
-undefined
+undefined## Images 
+### Image of wireframe plan: 
 
-## Images
 
-No images are available for this project.
+![Wireframe](./assets/images/wireframe.png)
 
+
+### Image of working site:
+
+
+![Program sample](./assets/images/preview.png)
 ## Credits
 
-no.
+
 
 ## Licenses
 
-I'm using this program illegally. leave me alone
+s
