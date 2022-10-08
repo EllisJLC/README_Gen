@@ -37,40 +37,9 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-  let {title, introduction, installation, usage, test, image, credits, license} = data;
-  let i = 1;
-  let imgText = "";
-  if (image === "yes") {
-    imgText = `## Images \n### Image of wireframe plan: \n\n
-    ![Wireframe](./assets/images/wireframe.png)\n\n
-    ### Image of working site:\n\n
-    ![Program sample](./assets/images/preview.png)`;
-  } else {
-    imgText = "No images are available for this project.";
-  }
-  fs.writeFile(fileName, 
-`# ${title}\n
-\n## Introduction
-\n${introduction}
-\n## Table of Contents
-${i, i++}. [Installation](#installation)
-${i, i++}. [Usage](#usage)
-${i, i++}. [Test](#test)
-${i, i++}. [Images](#images)
-${i, i++}. [Credits](#credits)
-${i, i++}. [Licenses](#licenses)
-\n## Installation 
-\n${installation}
-\n## Usage
-\n${usage}
-\n## Test
-\n${test}
-\n## Images
-\n${imgText}
-\n## Credits
-\n${credits}
-\n## Licenses
-\n${license}`, (error) => {
+  let writing = require("./utils/writer");
+  let text = writing(data);
+  fs.writeFile(fileName, text, (error) => {
       if (error) {
         console.log(error);
       } else {
